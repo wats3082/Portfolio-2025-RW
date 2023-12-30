@@ -149,8 +149,8 @@ input, textarea {
 }
 
 ::selection {
-  background: var( --bittersweet-shimmer);
-  color: var( --onyx);
+  background: var(--onyx);
+  color: var(--onyx);
 }
 
 :focus { outline-color: var(--orange-yellow-crayola); }
