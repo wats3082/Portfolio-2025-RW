@@ -149,7 +149,7 @@ input, textarea {
 }
 
 ::selection {
-  background: var(--orange-yellow-crayola);
+  background: var( --bittersweet-shimmer);
   color: var(--smoky-black);
 }
 
@@ -334,7 +334,7 @@ main {
 }
 
 .avatar-box {
-  background: var(--bg-gradient-onyx);
+  background: var( --bittersweet-shimmer);
   border-radius: 20px;
 }
 
