@@ -37,8 +37,8 @@
 	/* MAKE MY OWN COLOR FOR GRADIENT YELLOW 1 */
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(95, 100%, 71%) 0%, 
-    hsla(6, 100%, 69%, 0) 50%
+    hsl(9, 100%, 71%) 0%, 
+    hsla(64, 100%, 69%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
@@ -99,17 +99,17 @@
    */
   
   --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.45);
   --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
-  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
-  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.55);
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.65);
 
   /**
    * transition
    */
 
-  --transition-1: 0.25s ease;
-  --transition-2: 0.5s ease-in-out;
+  --transition-1: 0.45s ease;
+  --transition-2: 0.59s ease-in-out;
 
 }
 
@@ -319,7 +319,7 @@ main {
 .sidebar {
   margin-bottom: 15px;
   max-height: 112px;
-  overflow: hidden;
+ /* overflow: hidden;*/
   transition: var(--transition-2);
 }
 
