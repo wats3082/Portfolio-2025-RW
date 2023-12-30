@@ -194,7 +194,7 @@ article {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  color: var(--orange-yellow-crayola);
+  color: var(--forestgreen);
   box-shadow: var(--shadow-1);
   z-index: 1;
 }
