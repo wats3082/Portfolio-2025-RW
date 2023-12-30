@@ -315,6 +315,10 @@ main {
   margin: 15px 12px;
   margin-bottom: 75px;
   min-width: 259px;
+	@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
 }
 
 
