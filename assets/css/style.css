@@ -345,7 +345,7 @@ main {
 }
 
 .avatar-box {
-  background: var(--rxwcolorblue);
+  background: var(--orange-yellow-crayola);
   border-radius: 20px;
 }
 
@@ -485,7 +485,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
- background: var(--rxwcolorblue);
+ background: var(--onyx);
 
  /* background: hsla(240, 1%, 17%, 0.75);*/
   backdrop-filter: blur(10px);
