@@ -68,6 +68,7 @@
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
+  --rxwcolorblue: hsl(179, 47%, 53%);
 
   /**
    * typography
@@ -342,7 +343,7 @@ main {
 }
 
 .avatar-box {
-  background: var(--bittersweet-shimmer);
+  background: var(--rxwcolorblue);
   border-radius: 20px;
 }
 
@@ -482,7 +483,7 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
- background: var(--bittersweet-shimmer);
+ background: var(--rxwcolorblue);
 
  /* background: hsla(240, 1%, 17%, 0.75);*/
   backdrop-filter: blur(10px);
