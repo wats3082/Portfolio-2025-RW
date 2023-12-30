@@ -108,8 +108,8 @@
    * transition
    */
 
-  --transition-1: 0.45s ease;
-  --transition-2: 0.59s ease-in-out;
+  --transition-1: 0.25s ease;
+  --transition-2: 0.29s ease-in-out;
 
 }
 
@@ -150,7 +150,7 @@ input, textarea {
 
 ::selection {
   background: var( --bittersweet-shimmer);
-  color: var(--smoky-black);
+  color: var(--orange-yellow-crayola);
 }
 
 :focus { outline-color: var(--orange-yellow-crayola); }
@@ -169,7 +169,7 @@ body { background: var(--smoky-black); }
 
 .sidebar,
 article {
-  background: var(--eerie-black-2);
+  background: var(--orange-yellow-crayola);
   border: 1px solid var(--jet);
   border-radius: 20px;
   padding: 15px;
