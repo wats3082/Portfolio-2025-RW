@@ -33,12 +33,10 @@
     hsla(240, 1%, 18%, 0.251) 0%, 
     hsla(240, 2%, 11%, 0) 100%
   ), hsl(240, 2%, 13%);
-	
-	/* MAKE MY OWN COLOR FOR GRADIENT YELLOW 1 */
   --bg-gradient-yellow-1: linear-gradient(
     to bottom right, 
-    hsl(41, 100%, 71%) 0%, 
-    hsla(45, 100%, 69%, 0) 50%
+    hsl(45, 100%, 71%) 0%, 
+    hsla(36, 100%, 69%, 0) 50%
   );
   --bg-gradient-yellow-2: linear-gradient(
     135deg, 
@@ -99,17 +97,17 @@
    */
   
   --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.15);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.25);
   --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.25);
   --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.15);
-  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.15);
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.25);
 
   /**
    * transition
    */
 
   --transition-1: 0.25s ease;
-  --transition-2: 0.29s ease-in-out;
+  --transition-2: 0.5s ease-in-out;
 
 }
 
@@ -149,8 +147,8 @@ input, textarea {
 }
 
 ::selection {
-  background: var(--onyx);
-  color: var(--onyx);
+  background: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
 }
 
 :focus { outline-color: var(--orange-yellow-crayola); }
@@ -169,7 +167,7 @@ body { background: var(--smoky-black); }
 
 .sidebar,
 article {
-  background: var(--orange-yellow-crayola);
+  background: var(--eerie-black-2);
   border: 1px solid var(--jet);
   border-radius: 20px;
   padding: 15px;
@@ -194,7 +192,7 @@ article {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  color: var(--gradient-yellow);
+  color: var(--orange-yellow-crayola);
   box-shadow: var(--shadow-1);
   z-index: 1;
 }
@@ -334,7 +332,7 @@ main {
 }
 
 .avatar-box {
-  background: var(--bittersweet-shimmer);
+  background: var(--bg-gradient-onyx);
   border-radius: 20px;
 }
 
@@ -478,7 +476,7 @@ main {
 }
 
 .navbar-link {
-  color: var( --bittersweet-shimmer);
+  color: var(--light-gray);
   font-size: var(--fs-8);
   padding: 20px 7px;
   transition: color var(--transition-1);
