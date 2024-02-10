@@ -269,7 +269,7 @@ article.active {
 }
 
 .has-scrollbar::-webkit-scrollbar-thumb {
-  background: var(--orange-yellow-crayola);
+  background: var(--rxwcolorblue);
   border-radius: 5px;
 }
 
