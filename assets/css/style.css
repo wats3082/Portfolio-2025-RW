@@ -45,7 +45,7 @@
   ), hsl(240, 2%, 13%);
   --border-gradient-onyx: linear-gradient(
     to bottom right, 
-    hsl(0, 0%, 25%) 0%, 
+    hsl(225, 60%, 81%) 0%, 
     hsla(0, 0%, 25%, 0) 50%
   );
   --text-gradient-yellow: linear-gradient(
@@ -70,7 +70,7 @@
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
 	
-  --rxwcolorblue: hsl(225, 40%, 81%);
+  --rxwcolorblue: hsl(225, 60%, 81%);
 
   /**
    * typography
