@@ -69,6 +69,7 @@
   --light-gray: hsl(0, 0%, 84%);
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
   --bittersweet-shimmer: hsl(0, 43%, 51%);
+	
   --rxwcolorblue: hsl(225, 80%, 41%);
 
   /**
@@ -149,7 +150,7 @@ input, textarea {
 }
 
 ::selection {
-  background: var(--orange-yellow-crayola);
+  background: var(--rxwcolorblue);
   color: var(--smoky-black);
 }
 
