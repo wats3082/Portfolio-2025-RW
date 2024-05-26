@@ -150,8 +150,8 @@ input, textarea {
 }
 
 ::selection {
-  background: var(--rxwcolorblue);
-  color: var(--smoky-black);
+  background: var(--light-gray-70);
+  color: var(--light-gray-70);
 }
 
 :focus { outline-color: var(--orange-yellow-crayola); }
@@ -195,7 +195,7 @@ article {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  color: var(--rxwcolorblue);
+  color: var(--light-gray-70);
   box-shadow: var(--shadow-1);
   z-index: 1;
 }
@@ -254,7 +254,7 @@ article.active {
   left: 0;
   width: 30px;
   height: 3px;
-  background: var(--text-gradient-yellow);
+  background: var(--light-gray-70);
   border-radius: 3px;
 }
 
