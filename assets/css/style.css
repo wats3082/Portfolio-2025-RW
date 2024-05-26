@@ -515,7 +515,7 @@ main {
 .navbar-link:hover,
 .navbar-link:focus { color: var(--light-gray-70); }
 
-.navbar-link.active { color: var(--rxwcolorblue); }
+.navbar-link.active { color: var(--light-gray-70); }
 
 
 
