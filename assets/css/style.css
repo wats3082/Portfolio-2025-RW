@@ -154,11 +154,11 @@ input, textarea {
   color: var(--light-gray-70);
 }
 
-:focus { outline-color: var(--orange-yellow-crayola); }
+:focus { outline-color: var(--light-gray-70); }
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body { background: var(--light-gray-70); }
 
 
 
