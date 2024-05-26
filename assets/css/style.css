@@ -151,7 +151,7 @@ input, textarea {
 
 ::selection {
   background: var(--jet);
-  color: var(--onyx);
+  color: var(--jet);
 }
 
 :focus { outline-color: var(--jet); }
@@ -206,7 +206,7 @@ article {
   inset: 1px;
   background: var(--eerie-black-1);
   border-radius: inherit;
-  z-index: -1;
+  /*z-index: -1;*/
 }
 
 .icon-box ion-icon { --ionicon-stroke-width: 35px; }
@@ -246,7 +246,7 @@ article.active {
   position: relative;
   padding-bottom: 7px;
 }
-
+/*
 .article-title::after {
   content: "";
   position: absolute;
@@ -257,7 +257,7 @@ article.active {
   background: var(--light-gray-70);
   border-radius: 3px;
 }
-
+*/
 .has-scrollbar::-webkit-scrollbar {
   width: 5px; /* for vertical scrollbar */
   height: 5px; /* for horizontal scrollbar */
