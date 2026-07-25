@@ -17,6 +17,7 @@
 
 <body data-theme="dark">
   <div class="page-shell">
+    <!-- Top Header -->
     <header class="site-header">
       <div class="header-brand">
         <div class="brand-copy">
@@ -34,199 +35,190 @@
           </button>
         </div>
       </div>
-
-      <nav class="site-nav">
-        <button class="nav-link active" data-nav-link>About</button>
-        <button class="nav-link" data-nav-link>Resume</button>
-        <button class="nav-link" data-nav-link>Portfolio</button>
-        <button class="nav-link" data-nav-link>Contact</button>
-      </nav>
     </header>
 
-    <main>
-      <section class="hero-panel">
-        <div class="hero-card">
-          <div class="hero-stat">
-            <span>Principal Security Architect</span>
-            <p>Enterprise security strategy and risk-driven design</p>
-          </div>
-          <div class="hero-stat">
-            <span>AI & Cloud Security</span>
-            <p>Automation, threat detection, analytics</p>
-          </div>
-          <div class="hero-stat">
-            <span>Program Delivery</span>
-            <p>Secure systems, APIs, and infrastructure at scale</p>
-          </div>
-        </div>
-      </section>
+    <!-- Main Layout: Sidebar + Content -->
+    <div class="main-container">
+      <!-- Left Sidebar with Tabs -->
+      <aside class="sidebar">
+        <nav class="sidebar-nav">
+          <button class="nav-tab active" data-nav-link data-page="about">
+            <span class="tab-icon">ⓘ</span>
+            About
+          </button>
+          <button class="nav-tab" data-nav-link data-page="resume">
+            <span class="tab-icon">📄</span>
+            Resume
+          </button>
+          <button class="nav-tab" data-nav-link data-page="portfolio">
+            <span class="tab-icon">🎨</span>
+            Portfolio
+          </button>
+          <button class="nav-tab" data-nav-link data-page="contact">
+            <span class="tab-icon">✉️</span>
+            Contact
+          </button>
+        </nav>
+      </aside>
 
-      <section class="section about active" data-page="about">
-        <div class="section-header">
-          <span>About</span>
-          <h2>Professional summary</h2>
-        </div>
-        <div class="section-body">
-          <p>Principal Security Architect and consultant with experience spanning security operations, cloud architecture, AI-enabled automation, and enterprise program delivery. I design resilient systems, secure deployment pipelines, and risk-informed strategies that help organizations scale safely and confidently.</p>
-        </div>
+      <!-- Right Content Area -->
+      <div class="content-wrapper">
 
-        <div class="skill-grid">
-          <article class="skill-card">
-            <h3>Security Consulting</h3>
-            <p>Modern, high-quality security systems designed for enterprise-scale environments.</p>
-          </article>
-          <article class="skill-card">
-            <h3>Automations & CI/CD</h3>
-            <p>Reliable workflows that accelerate development, deployment, and operational stability.</p>
-          </article>
-          <article class="skill-card">
-            <h3>AI & Cloud Technology</h3>
-            <p>Solutions that combine cloud architecture with AI-driven data and security analytics.</p>
-          </article>
-          <article class="skill-card">
-            <h3>Continuous Learning</h3>
-            <p>Constantly staying current with emerging technologies and security best practices.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section resume" data-page="resume">
-        <div class="section-header">
-          <span>Resume</span>
-          <h2>Experience & impact</h2>
-        </div>
-
-        <div class="timeline-list">
-          <article class="timeline-card">
-            <div class="timeline-badge">2023 — 2026</div>
-            <div>
-              <h3>Principal Security Architect</h3>
-              <p>Leading enterprise security architecture, secure-by-design platform patterns, and AI-assisted cyber defense initiatives across modern cloud environments.</p>
+        <main class="main-content">
+          <!-- About Section -->
+          <section class="section about active" data-page="about">
+            <div class="section-header">
+              <h2>Professional Summary</h2>
             </div>
-          </article>
-          <article class="timeline-card">
-            <div class="timeline-badge">2021 — 2023</div>
-            <div>
-              <h3>Security Consultant</h3>
-              <p>Delivered security assessments, automation pipelines, and incident detection strategies while aligning stakeholders across operations, engineering, and leadership.</p>
+            <div class="section-body">
+              <p>Principal Security Architect and consultant with experience spanning security operations, cloud architecture, AI-enabled automation, and enterprise program delivery. I design resilient systems, secure deployment pipelines, and risk-informed strategies that help organizations scale safely and confidently.</p>
             </div>
-          </article>
-          <article class="timeline-card">
-            <div class="timeline-badge">2018 — 2021</div>
-            <div>
-              <h3>Cloud Architect & Delivery Lead</h3>
-              <p>Built secure full-stack applications, API integrations, and deployment workflows for hybrid and cloud-native environments.</p>
+
+            <div class="skill-grid">
+              <article class="skill-card">
+                <h3>Security Consulting</h3>
+                <p>Modern, high-quality security systems designed for enterprise-scale environments.</p>
+              </article>
+              <article class="skill-card">
+                <h3>Automations & CI/CD</h3>
+                <p>Reliable workflows that accelerate development, deployment, and operational stability.</p>
+              </article>
+              <article class="skill-card">
+                <h3>AI & Cloud Technology</h3>
+                <p>Solutions that combine cloud architecture with AI-driven data and security analytics.</p>
+              </article>
+              <article class="skill-card">
+                <h3>Continuous Learning</h3>
+                <p>Constantly staying current with emerging technologies and security best practices.</p>
+              </article>
             </div>
-          </article>
-        </div>
-      </section>
+          </section>
 
-      <section class="section portfolio" data-page="portfolio" id="portfolio">
-        <div class="section-header">
-          <span>Portfolio</span>
-          <h2>Selected work</h2>
-        </div>
+          <!-- Resume Section -->
+          <section class="section resume" data-page="resume">
+            <div class="section-header">
+              <h2>Experience & Impact</h2>
+            </div>
 
-        <div class="filter-panel">
-          <div class="filter-label">Filter</div>
-          <div class="filter-chips">
-            <button class="filter-button active" data-filter-btn>All</button>
-          </div>
-          <div class="filter-select" data-select>
-            <div class="select-value" data-selecct-value>All</div>
-            <ion-icon name="chevron-down"></ion-icon>
-            <ul class="select-list">
-              <li class="select-item"><button data-select-item>All</button></li>
-            </ul>
-          </div>
-        </div>
+            <div class="timeline-list">
+              <article class="timeline-card">
+                <div class="timeline-badge">2023 — 2026</div>
+                <div>
+                  <h3>Principal Security Architect</h3>
+                  <p>Leading enterprise security architecture, secure-by-design platform patterns, and AI-assisted cyber defense initiatives across modern cloud environments.</p>
+                </div>
+              </article>
+              <article class="timeline-card">
+                <div class="timeline-badge">2021 — 2023</div>
+                <div>
+                  <h3>Security Consultant</h3>
+                  <p>Delivered security assessments, automation pipelines, and incident detection strategies while aligning stakeholders across operations, engineering, and leadership.</p>
+                </div>
+              </article>
+              <article class="timeline-card">
+                <div class="timeline-badge">2018 — 2021</div>
+                <div>
+                  <h3>Cloud Architect & Delivery Lead</h3>
+                  <p>Built secure full-stack applications, API integrations, and deployment workflows for hybrid and cloud-native environments.</p>
+                </div>
+              </article>
+            </div>
+          </section>
 
-        <div class="project-grid">
-          <article class="project-card">
-            <a href="https://github.com/wats3082/API-Local-Weather" target="_blank">
-              <div class="project-image" style="background-image:url('./stockai.jpg');"></div>
-              <div class="project-meta">
-                <span>Open Weather App</span>
-                <p>Professional weather API dashboard built with Flask and Python, delivering reliable forecasting and local insights.</p>
+          <!-- Portfolio Section -->
+          <section class="section portfolio" data-page="portfolio" id="portfolio">
+            <div class="section-header">
+              <h2>Selected Work</h2>
+            </div>
+
+            <div class="project-grid">
+              <article class="project-card">
+                <a href="https://github.com/wats3082/API-Local-Weather" target="_blank">
+                  <div class="project-image" style="background-image:url('./stockai.jpg');"></div>
+                  <div class="project-meta">
+                    <span>Open Weather App</span>
+                    <p>Professional weather API dashboard built with Flask and Python, delivering reliable forecasting and local insights.</p>
+                  </div>
+                </a>
+              </article>
+
+              <article class="project-card">
+                <a href="https://github.com/wats3082/API-English_French-Translator" target="_blank">
+                  <div class="project-image" style="background-image:url('./assets/images/project-4.png');"></div>
+                  <div class="project-meta">
+                    <span>AI Translator App</span>
+                    <p>Real-time language translation using IBM Watson for fast cross-language communication workflows.</p>
+                  </div>
+                </a>
+              </article>
+
+              <article class="project-card">
+                <a href="https://github.com/wats3082/Project-Web-Scraper" target="_blank">
+                  <div class="project-image" style="background-image:url('./aihallwayimage.jpg');"></div>
+                  <div class="project-meta">
+                    <span>Web Scraper Automation</span>
+                    <p>Automated data collection from Wikipedia tables into Excel-ready output for analytics and reporting.</p>
+                  </div>
+                </a>
+              </article>
+
+              <article class="project-card">
+                <a href="https://github.com/wats3082/Project-Movie-Reviews-Database" target="_blank">
+                  <div class="project-image" style="background-image:url('./assets/images/project-5.png');"></div>
+                  <div class="project-meta">
+                    <span>Movie Review Database</span>
+                    <p>Searchable MongoDB-backed review system for dynamic content management and user interaction.</p>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </section>
+
+          <!-- Contact Section -->
+          <section class="section contact" data-page="contact" id="contact">
+            <div class="section-header">
+              <h2>Get in Touch</h2>
+            </div>
+
+            <div class="contact-grid">
+              <div class="contact-card">
+                <h3>Contact Details</h3>
+                <p><strong>Email</strong><br><a href="mailto:russellalanwatson@gmail.com">russellalanwatson@gmail.com</a></p>
+                <p><strong>Phone</strong><br><a href="tel:+14804167911">(480) 416-7911</a></p>
+                <p><strong>Location</strong><br>Arizona, USA</p>
+                <div class="social-links">
+                  <a href="https://github.com/wats3082?tab=repositories" target="_blank">GitHub</a>
+                  <a href="https://www.linkedin.com/in/r-wats3082" target="_blank">LinkedIn</a>
+                  <a href="https://www.facebook.com/russell.watson.92" target="_blank">Facebook</a>
+                  <a href="https://discord.com/channels/1403572693894299678/1403572693894299681" target="_blank">Discord</a>
+                </div>
               </div>
-            </a>
-          </article>
 
-          <article class="project-card">
-            <a href="https://github.com/wats3082/API-English_French-Translator" target="_blank">
-              <div class="project-image" style="background-image:url('./assets/images/project-4.png');"></div>
-              <div class="project-meta">
-                <span>AI Translator App</span>
-                <p>Real-time language translation using IBM Watson for fast cross-language communication workflows.</p>
-              </div>
-            </a>
-          </article>
-
-          <article class="project-card">
-            <a href="https://github.com/wats3082/Project-Web-Scraper" target="_blank">
-              <div class="project-image" style="background-image:url('./aihallwayimage.jpg');"></div>
-              <div class="project-meta">
-                <span>Web Scraper Automation</span>
-                <p>Automated data collection from Wikipedia tables into Excel-ready output for analytics and reporting.</p>
-              </div>
-            </a>
-          </article>
-
-          <article class="project-card">
-            <a href="https://github.com/wats3082/Project-Movie-Reviews-Database" target="_blank">
-              <div class="project-image" style="background-image:url('./assets/images/project-5.png');"></div>
-              <div class="project-meta">
-                <span>Movie Review Database</span>
-                <p>Searchable MongoDB-backed review system for dynamic content management and user interaction.</p>
-              </div>
-            </a>
-          </article>
-        </div>
-      </section>
-
-      <section class="section contact" data-page="contact" id="contact">
-        <div class="section-header">
-          <span>Contact</span>
-          <h2>Get in touch</h2>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Contact details</h3>
-            <p><strong>Email</strong><br><a href="mailto:russellalanwatson@gmail.com">russellalanwatson@gmail.com</a></p>
-            <p><strong>Phone</strong><br><a href="tel:+14804167911">(480) 416-7911</a></p>
-            <p><strong>Location</strong><br>Arizona, USA</p>
-            <div class="social-links">
-              <a href="https://github.com/wats3082?tab=repositories" target="_blank">GitHub</a>
-              <a href="https://www.linkedin.com/in/r-wats3082" target="_blank">LinkedIn</a>
-              <a href="https://www.facebook.com/russell.watson.92" target="_blank">Facebook</a>
-              <a href="https://discord.com/channels/1403572693894299678/1403572693894299681" target="_blank">Discord</a>
+              <form class="contact-form" data-form>
+                <div class="input-row">
+                  <label>
+                    <span>Name</span>
+                    <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                  </label>
+                  <label>
+                    <span>Email</span>
+                    <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+                  </label>
+                </div>
+                <label>
+                  <span>Message</span>
+                  <textarea name="message" class="form-input" placeholder="Your message" rows="5" required data-form-input></textarea>
+                </label>
+                <button class="form-btn" type="submit" disabled data-form-btn>
+                  <ion-icon name="paper-plane"></ion-icon>
+                  <span>Send Message</span>
+                </button>
+              </form>
             </div>
-          </div>
-
-          <form class="contact-form" data-form>
-            <div class="input-row">
-              <label>
-                <span>Name</span>
-                <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-              </label>
-              <label>
-                <span>Email</span>
-                <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-              </label>
-            </div>
-            <label>
-              <span>Message</span>
-              <textarea name="message" class="form-input" placeholder="Your message" rows="5" required data-form-input></textarea>
-            </label>
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-          </form>
-        </div>
-      </section>
-    </main>
+          </section>
+        </main>
+      </div>
+    </div>
 
     <footer class="site-footer">
       <p>Designed for a modern dark portfolio experience — Russell Watson.</p>
