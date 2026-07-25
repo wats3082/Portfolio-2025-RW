@@ -24,8 +24,6 @@ function Header({ onNavigate }) {
           <p className="hero-copy">Specialized in secure software development, threat detection systems, and security automation for enterprise environments.</p>
         </div>
         <div className="header-actions">
-          <button className="button button-primary" onClick={() => onNavigate("portfolio")}>View Portfolio</button>
-          <button className="button button-secondary" onClick={() => onNavigate("contact")}>Contact Me</button>
           <button className="button button-ghost" onClick={toggleTheme}>{theme === "dark" ? "Light Mode" : "Dark Mode"}</button>
         </div>
       </div>
@@ -139,7 +137,7 @@ export default function App() {
   const PageComponent = pages[activePage]
   return (
     <div className="page-shell">
-      <Header onNavigate={setActivePage} />
+      <Header />
       <div className="main-container">
         <Sidebar active={activePage} onNavigate={setActivePage} />
         <div className="content-wrapper">
