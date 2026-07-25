@@ -116,33 +116,66 @@ button {
 }
 
 h1 {
-  font-size: clamp(2.8rem, 4vw, 4.4rem);
+  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
   line-height: 0.96;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
+  color: var(--text);
 }
 
 .hero-copy {
   max-width: 58rem;
   color: var(--muted);
-  font-size: 1.02rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.header-brand {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 22px;
+  align-items: flex-start;
+}
+
+.brand-copy {
+  min-width: 320px;
+  max-width: 600px;
+  flex: 1;
 }
 
 .header-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  align-items: center;
+  gap: 12px;
+  align-items: flex-start;
+  z-index: 100;
+  position: relative;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 13px 22px;
+  gap: 8px;
+  padding: 11px 18px;
   border-radius: 999px;
   font-weight: 600;
+  font-size: 0.85rem;
   transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  z-index: 100;
 }
 
 .button-primary {
@@ -186,6 +219,7 @@ h1 {
   backdrop-filter: blur(22px);
   margin-bottom: 28px;
   z-index: 11;
+  position: relative;
 }
 
 .main-container {
