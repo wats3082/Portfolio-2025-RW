@@ -1,0 +1,14 @@
+{
+  "name": "pacs-security-aws-backend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "start": "sam local start-api",
+    "deploy": "sam deploy --guided"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.6.2"
+  }
+}
