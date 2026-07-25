@@ -155,29 +155,22 @@ for (let i = 0; i < formInputs.length; i++) {
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
+const pages = document.querySelectorAll(".section[data-page]");
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-    const targetPage = this.dataset.page;
-
-    for (let j = 0; j < pages.length; j++) {
-      if (targetPage === pages[j].dataset.page) {
-        pages[j].classList.add("active");
-      } else {
-        pages[j].classList.remove("active");
-      }
-    }
-
-    for (let j = 0; j < navigationLinks.length; j++) {
-      if (navigationLinks[j] === this) {
-        navigationLinks[j].classList.add("active");
-      } else {
-        navigationLinks[j].classList.remove("active");
-      }
-    }
-
-    window.scrollTo(0, 0);
+// navigation function
+function navigateTo(targetPage) {
+  pages.forEach(page => {
+    page.classList.toggle("active", page.dataset.page === targetPage);
   });
+  navigationLinks.forEach(link => {
+    link.classList.toggle("active", link.dataset.page === targetPage);
+  });
+  window.scrollTo(0, 0);
 }
+
+// add event to all nav links
+navigationLinks.forEach(link => {
+  link.addEventListener("click", function () {
+    navigateTo(this.dataset.page);
+  });
+});
