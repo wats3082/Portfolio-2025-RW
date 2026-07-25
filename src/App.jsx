@@ -2,10 +2,10 @@ import { useState } from "react"
 import "./App.css"
 
 const tabs = [
-  { id: "about",     icon: "ⓘ",  label: "About" },
-  { id: "resume",    icon: "📄", label: "Resume" },
-  { id: "portfolio", icon: "🎨", label: "Portfolio" },
-  { id: "contact",   icon: "✉️", label: "Contact" },
+  { id: "about",     label: "About" },
+  { id: "resume",    label: "Resume" },
+  { id: "portfolio", label: "Portfolio" },
+  { id: "contact",   label: "Contact" },
 ]
 
 function Header({ onNavigate }) {
@@ -26,7 +26,7 @@ function Header({ onNavigate }) {
         <div className="header-actions">
           <button className="button button-primary" onClick={() => onNavigate("portfolio")}>View Portfolio</button>
           <button className="button button-secondary" onClick={() => onNavigate("contact")}>Contact Me</button>
-          <button className="button button-ghost" onClick={toggleTheme}>{theme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode"}</button>
+          <button className="button button-ghost" onClick={toggleTheme}>{theme === "dark" ? "Light Mode" : "Dark Mode"}</button>
         </div>
       </div>
     </header>
@@ -39,8 +39,7 @@ function Sidebar({ active, onNavigate }) {
       <nav className="sidebar-nav">
         {tabs.map(tab => (
           <button key={tab.id} className={"nav-tab" + (active === tab.id ? " active" : "")} onClick={() => onNavigate(tab.id)}>
-            <span className="tab-icon">{tab.icon}</span>
-            <span>{tab.label}</span>
+            {tab.label}
           </button>
         ))}
       </nav>

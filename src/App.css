@@ -6,7 +6,9 @@
   --border: rgba(255,255,255,0.08);
   --text: #eef2ff;
   --muted: #9aa6c3;
-  --accent: #7ae7ff;
+  --accent: #f59e0b;
+  --accent-glow: rgba(245,158,11,0.25);
+  --accent-light: #fbbf24;
   --shadow: 0 20px 60px rgba(0,0,0,0.35);
   --radius: 20px;
   --radius-sm: 14px;
@@ -107,8 +109,8 @@ h1 {
 }
 
 .button:hover { transform: translateY(-1px); opacity: 0.9; }
-.button-primary { background: linear-gradient(135deg,var(--accent),#4cc0ff); color: #050f1b; }
-.button-secondary { background: rgba(255,255,255,0.06); border: 1px solid var(--border); color: var(--text); }
+.button-primary { background: linear-gradient(135deg, var(--accent), #d97706); color: #0a0a0a; }
+.button-secondary { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.3); color: var(--accent); }
 .button-ghost { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); color: var(--text); }
 
 /* ===== MAIN LAYOUT ===== */
@@ -152,12 +154,13 @@ h1 {
   text-align: left;
 }
 
-.nav-tab:hover { background: rgba(255,255,255,0.05); color: var(--text); transform: translateX(3px); }
+.nav-tab:hover { background: rgba(245,158,11,0.08); color: var(--accent); transform: translateX(3px); }
 .nav-tab.active {
-  background: linear-gradient(135deg,rgba(122,231,255,0.2),rgba(76,192,255,0.1));
-  border-color: rgba(122,231,255,0.3);
+  background: linear-gradient(135deg, rgba(245,158,11,0.2), rgba(217,119,6,0.1));
+  border-color: rgba(245,158,11,0.4);
   color: var(--accent);
   font-weight: 600;
+  box-shadow: inset 0 0 20px rgba(245,158,11,0.08);
 }
 .tab-icon { font-size: 1.1rem; }
 
@@ -192,18 +195,19 @@ h1 {
 /* ===== TIMELINE ===== */
 .timeline-list { display: grid; gap: 14px; }
 .timeline-card { display: flex; gap: 16px; padding: 20px; background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 16px; }
-.timeline-badge { flex-shrink: 0; display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 999px; background: rgba(122,231,255,0.12); color: var(--accent); font-weight: 600; font-size: 0.82rem; white-space: nowrap; height: fit-content; }
+.timeline-badge { flex-shrink: 0; display: inline-flex; align-items: center; padding: 8px 14px; border-radius: 999px; background: rgba(245,158,11,0.12); color: var(--accent); font-weight: 600; font-size: 0.82rem; white-space: nowrap; height: fit-content; border: 1px solid rgba(245,158,11,0.2); }
 .timeline-card h3 { margin-bottom: 6px; font-size: 0.95rem; }
 .timeline-card p { color: var(--muted); font-size: 0.88rem; }
 
 /* ===== PORTFOLIO ===== */
 .project-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
-.project-card { border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); border: 1px solid var(--border); transition: transform 0.2s, border-color 0.2s; }
-.project-card:hover { transform: translateY(-4px); border-color: rgba(122,231,255,0.3); }
+.project-card { border-radius: 16px; overflow: hidden; background: rgba(255,255,255,0.03); border: 1px solid var(--border); transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; }
+.project-card:hover { transform: translateY(-4px); border-color: rgba(245,158,11,0.5); box-shadow: 0 0 30px rgba(245,158,11,0.15); }
 .project-card a { display: grid; text-decoration: none; }
-.project-image { height: 180px; background-size: cover; background-position: center; }
-.project-meta { padding: 16px; }
-.project-meta span { display: block; font-weight: 700; margin-bottom: 6px; font-size: 0.9rem; }
+.project-image { height: 180px; background-size: cover; background-position: center; position: relative; }
+.project-image::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(245,158,11,0.08)); }
+.project-meta { padding: 16px; border-top: 1px solid rgba(245,158,11,0.15); }
+.project-meta span { display: block; font-weight: 700; margin-bottom: 6px; font-size: 0.9rem; color: var(--accent-light); }
 .project-meta p { color: var(--muted); font-size: 0.83rem; line-height: 1.7; }
 
 /* ===== CONTACT ===== */
