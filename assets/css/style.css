@@ -116,24 +116,24 @@ button {
 }
 
 h1 {
-  font-size: clamp(1.8rem, 2.5vw, 2.6rem);
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
   line-height: 0.96;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
   color: var(--text);
 }
 
 .hero-copy {
   max-width: 58rem;
   color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-size: 0.8rem;
+  line-height: 1.5;
 }
 
 .eyebrow {
   display: inline-block;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
   color: var(--accent);
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
 }
@@ -142,13 +142,13 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 22px;
+  gap: 12px;
   align-items: flex-start;
 }
 
 .brand-copy {
-  min-width: 320px;
-  max-width: 600px;
+  min-width: 280px;
+  max-width: 550px;
   flex: 1;
 }
 
@@ -210,14 +210,14 @@ h1 {
 
 .site-header {
   display: grid;
-  gap: 26px;
-  padding: 28px;
+  gap: 12px;
+  padding: 14px 20px;
   border: 1px solid var(--border);
   background: rgba(11, 15, 33, 0.95);
-  border-radius: var(--radius);
+  border-radius: var(--radius-sm);
   box-shadow: var(--shadow);
   backdrop-filter: blur(22px);
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   z-index: 11;
   position: relative;
 }

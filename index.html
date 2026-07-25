@@ -27,8 +27,8 @@
         </div>
 
         <div class="header-actions">
-          <a class="button button-primary" href="#portfolio">View Portfolio</a>
-          <a class="button button-secondary" href="#contact">Contact Me</a>
+          <a class="button button-primary" onclick="document.querySelector('[data-page=portfolio]').click(); return false;">View Portfolio</a>
+          <a class="button button-secondary" onclick="document.querySelector('[data-page=contact]').click(); return false;">Contact Me</a>
           <button class="button button-ghost" id="theme-toggle" type="button">
             <ion-icon name="moon-outline"></ion-icon>
             <span>Light Mode</span>
