@@ -190,7 +190,7 @@ h1 {
 
 .main-container {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 180px 1fr;
   gap: 24px;
   flex: 1;
 }
@@ -204,19 +204,20 @@ h1 {
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 16px;
+  gap: 12px;
+  padding: 20px;
   border: 1px solid var(--border);
-  background: rgba(8, 11, 24, 0.6);
+  background: rgba(8, 11, 24, 0.8);
   border-radius: var(--radius-sm);
   backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
 }
 
 .nav-tab {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 16px;
+  padding: 14px 16px;
   border: none;
   background: transparent;
   color: var(--muted);
@@ -226,22 +227,26 @@ h1 {
   transition: all 0.25s ease;
   cursor: pointer;
   text-align: left;
+  white-space: nowrap;
 }
 
 .nav-tab:hover {
   background: rgba(255, 255, 255, 0.06);
   color: var(--text);
+  transform: translateX(4px);
 }
 
 .nav-tab.active {
-  background: linear-gradient(135deg, rgba(122, 231, 255, 0.2), rgba(76, 192, 255, 0.1));
+  background: linear-gradient(135deg, rgba(122, 231, 255, 0.25), rgba(76, 192, 255, 0.15));
   border: 1px solid rgba(122, 231, 255, 0.3);
   color: var(--accent);
   font-weight: 600;
+  box-shadow: inset 0 0 20px rgba(122, 231, 255, 0.1);
 }
 
 .tab-icon {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  flex-shrink: 0;
 }
 
 .content-wrapper {
@@ -334,13 +339,18 @@ h1 {
   .sidebar-nav {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    gap: 12px;
   }
 
   .nav-tab {
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
     font-size: 0.85rem;
+    padding: 12px 8px;
+  }
+
+  .tab-icon {
+    font-size: 1.5rem;
   }
 
   .skill-grid {
