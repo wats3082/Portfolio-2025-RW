@@ -22,29 +22,38 @@ const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
 const testimonialsModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
+  if (modalContainer) modalContainer.classList.toggle("active");
+  if (overlay) overlay.classList.toggle("active");
 }
 
 // add click event to all modal items
-for (let i = 0; i < testimonialsItem.length; i++) {
+if (testimonialsItem.length && modalImg && modalTitle && modalText) {
+  for (let i = 0; i < testimonialsItem.length; i++) {
 
-  testimonialsItem[i].addEventListener("click", function () {
+    testimonialsItem[i].addEventListener("click", function () {
+      const avatar = this.querySelector("[data-testimonials-avatar]");
+      const title = this.querySelector("[data-testimonials-title]");
+      const text = this.querySelector("[data-testimonials-text]");
 
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+      if (!avatar || !title || !text) return;
 
-    testimonialsModalFunc();
+      modalImg.src = avatar.src;
+      modalImg.alt = avatar.alt;
+      modalTitle.innerHTML = title.innerHTML;
+      modalText.innerHTML = text.innerHTML;
 
-  });
+      testimonialsModalFunc();
 
+    });
+
+  }
 }
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+if (modalCloseBtn && overlay) {
+  modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+  overlay.addEventListener("click", testimonialsModalFunc);
+}
 
 
 
