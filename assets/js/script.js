@@ -5,16 +5,9 @@
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-
-
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
-
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
-
-
+// theme toggle variables
+const themeToggle = document.getElementById("theme-toggle");
+const bodyElement = document.body;
 
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
@@ -119,6 +112,21 @@ for (let i = 0; i < filterBtn.length; i++) {
 const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
+
+// theme toggle behavior
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const currentTheme = bodyElement.getAttribute("data-theme");
+    const nextTheme = currentTheme === "dark" ? "light" : "dark";
+    bodyElement.setAttribute("data-theme", nextTheme);
+
+    if (nextTheme === "light") {
+      themeToggle.innerHTML = '<ion-icon name="sunny-outline"></ion-icon><span>Dark Mode</span>';
+    } else {
+      themeToggle.innerHTML = '<ion-icon name="moon-outline"></ion-icon><span>Light Mode</span>';
+    }
+  });
+}
 
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
