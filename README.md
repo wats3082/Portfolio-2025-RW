@@ -16,7 +16,9 @@ The site intentionally makes no claim that Sentinel Ops is deployed. Weather API
 
 ## Local preview
 
-This is a dependency-free static site. From the repository root:
+This is a dependency-free static site with no runtime backend calls. The project cards are maintained as repository-derived editorial content, so the public demo remains useful without credentials, API keys, or fake service responses.
+
+From the repository root:
 
 ```powershell
 python -m http.server 8000
@@ -54,6 +56,16 @@ sitemap.xml            Canonical page discovery
 aws-backend/           Separate PACS proof of concept
 ```
 
-## Publishing
+## Deployment
 
-Publish the repository root with GitHub Pages from the default `master` branch.
+Pushes to `master` run [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml). The workflow:
+
+1. Checks out the repository without injecting credentials into the site.
+2. Stages only `index.html`, crawler metadata, the active stylesheet and script, and the favicon.
+3. Adds `.nojekyll`, uploads the static artifact, and deploys through GitHub's official Pages actions.
+
+GitHub Pages must use **GitHub Actions** as its build source. The published project URL is:
+
+<https://wats3082.github.io/Portfolio-2025-RW/>
+
+All local asset references are document-relative (`./assets/...`), navigation uses in-page fragments, and canonical metadata includes the `/Portfolio-2025-RW/` project path.
