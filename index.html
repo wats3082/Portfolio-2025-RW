@@ -1,233 +1,218 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Russell Watson is a principal security architect and consultant specializing in enterprise security, AI-enabled automation, and cloud architecture." />
-  <title>Russell Watson — Principal Security Architect</title>
-
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Russell Watson builds dependable security, cloud, and automation products with React, TypeScript, AWS, and operational context.">
+  <meta name="theme-color" content="#08111f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Russell Watson | Security-minded software engineer">
+  <meta property="og:description" content="Case studies in security operations, serverless weather tooling, and practical automation.">
+  <meta property="og:url" content="https://wats3082.github.io/Portfolio-2025-RW/">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://wats3082.github.io/Portfolio-2025-RW/">
+  <link rel="icon" href="./assets/images/logo.ico">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Russell Watson | Security-minded software engineer</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Russell Watson",
+      "url": "https://wats3082.github.io/Portfolio-2025-RW/",
+      "email": "mailto:russellalanwatson@gmail.com",
+      "jobTitle": "Security-minded software engineer",
+      "address": {"@type": "PostalAddress", "addressRegion": "Arizona", "addressCountry": "US"},
+      "sameAs": [
+        "https://github.com/wats3082",
+        "https://www.linkedin.com/in/r-wats3082"
+      ],
+      "knowsAbout": ["Security operations", "React", "TypeScript", "AWS", "Cloud architecture", "Automation"]
+    }
+  </script>
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<body data-theme="dark">
-  <div class="page-shell">
-    <!-- Top Header -->
-    <header class="site-header">
-      <div class="header-brand">
-        <div class="brand-copy">
-          <p class="eyebrow">Security Software Specialist</p>
-          <h1>Russell Watson</h1>
-          <p class="hero-copy">Specialized in developing secure software solutions, threat detection systems, and security automation tools for enterprise environments.</p>
-        </div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Russell Watson, home">
+      <span class="brand-mark" aria-hidden="true">RW</span>
+      <span>Russell Watson</span>
+    </a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#work">Work</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme">
+      <span aria-hidden="true">◐</span>
+      <span class="theme-label">Light</span>
+    </button>
+  </header>
 
-        <div class="header-actions">
-          <button class="button button-primary" onclick="document.querySelector('[data-nav-link][data-page=portfolio]').click(); return false;">View Portfolio</button>
-          <button class="button button-secondary" onclick="document.querySelector('[data-nav-link][data-page=contact]').click(); return false;">Contact Me</button>
-          <button class="button button-ghost" id="theme-toggle" type="button">
-            <ion-icon name="moon-outline"></ion-icon>
-            <span>Light Mode</span>
-          </button>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Phoenix, Arizona · Open to conversations</p>
+        <h1 id="hero-title">I turn operational complexity into <em>dependable software.</em></h1>
+        <p class="hero-lede">Security-minded software engineer bringing 15 years across asset protection, field systems, security operations, and program delivery to modern React, TypeScript, AWS, and automation work.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Explore case studies <span aria-hidden="true">↓</span></a>
+          <a class="button button-secondary" href="https://wats3082.github.io/Watson_Resume/" target="_blank" rel="noreferrer">View résumé <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a>
         </div>
       </div>
-    </header>
-
-    <!-- Main Layout: Sidebar + Content -->
-    <div class="main-container">
-      <!-- Left Sidebar with Navigation Menu -->
-      <aside class="sidebar">
-        <nav class="sidebar-nav">
-          <button class="nav-tab active" data-nav-link data-page="about">
-            <span class="tab-icon">ⓘ</span>
-            <span>About</span>
-          </button>
-          <button class="nav-tab" data-nav-link data-page="resume">
-            <span class="tab-icon">📄</span>
-            <span>Resume</span>
-          </button>
-          <button class="nav-tab" data-nav-link data-page="portfolio">
-            <span class="tab-icon">🎨</span>
-            <span>Portfolio</span>
-          </button>
-          <button class="nav-tab" data-nav-link data-page="contact">
-            <span class="tab-icon">✉️</span>
-            <span>Contact</span>
-          </button>
-        </nav>
+      <aside class="hero-panel" aria-label="Current focus">
+        <p class="panel-label">Current focus</p>
+        <p class="panel-statement">Secure full-stack systems that connect real operator needs to maintainable cloud architecture.</p>
+        <dl class="role-list">
+          <div><dt>Shape</dt><dd>Product + architecture</dd></div>
+          <div><dt>Build</dt><dd>React + TypeScript</dd></div>
+          <div><dt>Ship</dt><dd>AWS + CI/CD</dd></div>
+        </dl>
       </aside>
+    </section>
 
-      <!-- Right Content Area -->
-      <div class="content-wrapper">
+    <section class="proof-bar" aria-label="Evidence at a glance">
+      <div><strong>15 years</strong><span>Field-to-software context</span></div>
+      <div><strong>4 domains</strong><span>Unified in Sentinel Ops</span></div>
+      <div><strong>6 Lambdas</strong><span>Defined in one AWS stack</span></div>
+      <div><strong>5 factors</strong><span>In the weather risk heuristic</span></div>
+    </section>
 
-        <main class="main-content">
-          <!-- About Section -->
-          <section class="section about active" data-page="about">
-            <div class="section-header">
-              <h2>Professional Summary</h2>
-            </div>
-            <div class="section-body">
-              <p>Principal Security Architect and consultant with experience spanning security operations, cloud architecture, AI-enabled automation, and enterprise program delivery. I design resilient systems, secure deployment pipelines, and risk-informed strategies that help organizations scale safely and confidently.</p>
-            </div>
-
-            <div class="skill-grid">
-              <article class="skill-card">
-                <h3>Security Consulting</h3>
-                <p>Modern, high-quality security systems designed for enterprise-scale environments.</p>
-              </article>
-              <article class="skill-card">
-                <h3>Automations & CI/CD</h3>
-                <p>Reliable workflows that accelerate development, deployment, and operational stability.</p>
-              </article>
-              <article class="skill-card">
-                <h3>AI & Cloud Technology</h3>
-                <p>Solutions that combine cloud architecture with AI-driven data and security analytics.</p>
-              </article>
-              <article class="skill-card">
-                <h3>Continuous Learning</h3>
-                <p>Constantly staying current with emerging technologies and security best practices.</p>
-              </article>
-            </div>
-          </section>
-
-          <!-- Resume Section -->
-          <section class="section resume" data-page="resume">
-            <div class="section-header">
-              <h2>Experience & Impact</h2>
-            </div>
-
-            <div class="timeline-list">
-              <article class="timeline-card">
-                <div class="timeline-badge">2023 — 2026</div>
-                <div>
-                  <h3>Principal Security Architect</h3>
-                  <p>Leading enterprise security architecture, secure-by-design platform patterns, and AI-assisted cyber defense initiatives across modern cloud environments.</p>
-                </div>
-              </article>
-              <article class="timeline-card">
-                <div class="timeline-badge">2021 — 2023</div>
-                <div>
-                  <h3>Security Consultant</h3>
-                  <p>Delivered security assessments, automation pipelines, and incident detection strategies while aligning stakeholders across operations, engineering, and leadership.</p>
-                </div>
-              </article>
-              <article class="timeline-card">
-                <div class="timeline-badge">2018 — 2021</div>
-                <div>
-                  <h3>Cloud Architect & Delivery Lead</h3>
-                  <p>Built secure full-stack applications, API integrations, and deployment workflows for hybrid and cloud-native environments.</p>
-                </div>
-              </article>
-            </div>
-          </section>
-
-          <!-- Portfolio Section -->
-          <section class="section portfolio" data-page="portfolio" id="portfolio">
-            <div class="section-header">
-              <h2>Selected Work</h2>
-            </div>
-
-            <div class="project-grid">
-              <article class="project-card">
-                <a href="https://github.com/wats3082/API-Local-Weather" target="_blank">
-                  <div class="project-image" style="background-image:url('./stockai.jpg');"></div>
-                  <div class="project-meta">
-                    <span>Open Weather App</span>
-                    <p>Professional weather API dashboard built with Flask and Python, delivering reliable forecasting and local insights.</p>
-                  </div>
-                </a>
-              </article>
-
-              <article class="project-card">
-                <a href="https://github.com/wats3082/API-English_French-Translator" target="_blank">
-                  <div class="project-image" style="background-image:url('./assets/images/project-4.png');"></div>
-                  <div class="project-meta">
-                    <span>AI Translator App</span>
-                    <p>Real-time language translation using IBM Watson for fast cross-language communication workflows.</p>
-                  </div>
-                </a>
-              </article>
-
-              <article class="project-card">
-                <a href="https://github.com/wats3082/Project-Web-Scraper" target="_blank">
-                  <div class="project-image" style="background-image:url('./aihallwayimage.jpg');"></div>
-                  <div class="project-meta">
-                    <span>Web Scraper Automation</span>
-                    <p>Automated data collection from Wikipedia tables into Excel-ready output for analytics and reporting.</p>
-                  </div>
-                </a>
-              </article>
-
-              <article class="project-card">
-                <a href="https://github.com/wats3082/Project-Movie-Reviews-Database" target="_blank">
-                  <div class="project-image" style="background-image:url('./assets/images/project-5.png');"></div>
-                  <div class="project-meta">
-                    <span>Movie Review Database</span>
-                    <p>Searchable MongoDB-backed review system for dynamic content management and user interaction.</p>
-                  </div>
-                </a>
-              </article>
-            </div>
-          </section>
-
-          <!-- Contact Section -->
-          <section class="section contact" data-page="contact" id="contact">
-            <div class="section-header">
-              <h2>Get in Touch</h2>
-            </div>
-
-            <div class="contact-grid">
-              <div class="contact-card">
-                <h3>Contact Details</h3>
-                <p><strong>Email</strong><br><a href="mailto:russellalanwatson@gmail.com">russellalanwatson@gmail.com</a></p>
-                <p><strong>Phone</strong><br><a href="tel:+14804167911">(480) 416-7911</a></p>
-                <p><strong>Location</strong><br>Arizona, USA</p>
-                <div class="social-links">
-                  <a href="https://github.com/wats3082?tab=repositories" target="_blank">GitHub</a>
-                  <a href="https://www.linkedin.com/in/r-wats3082" target="_blank">LinkedIn</a>
-                  <a href="https://www.facebook.com/russell.watson.92" target="_blank">Facebook</a>
-                  <a href="https://discord.com/channels/1403572693894299678/1403572693894299681" target="_blank">Discord</a>
-                </div>
-              </div>
-
-              <form class="contact-form" data-form>
-                <div class="input-row">
-                  <label>
-                    <span>Name</span>
-                    <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-                  </label>
-                  <label>
-                    <span>Email</span>
-                    <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-                  </label>
-                </div>
-                <label>
-                  <span>Message</span>
-                  <textarea name="message" class="form-input" placeholder="Your message" rows="5" required data-form-input></textarea>
-                </label>
-                <button class="form-btn" type="submit" disabled data-form-btn>
-                  <ion-icon name="paper-plane"></ion-icon>
-                  <span>Send Message</span>
-                </button>
-              </form>
-            </div>
-          </section>
-        </main>
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Built around the decision, not the demo.</h2>
+        </div>
+        <p>Each case study separates implemented capability from planned work and links directly to the source.</p>
       </div>
-    </div>
 
-    <footer class="site-footer">
-      <p>Designed for a modern dark portfolio experience — Russell Watson.</p>
-    </footer>
-  </div>
+      <article class="case-study case-study-featured">
+        <div class="case-number" aria-hidden="true">01</div>
+        <div class="case-content">
+          <div class="case-topline">
+            <span class="project-type">Security operations platform</span>
+            <span class="project-state">Source available · Deployment pending</span>
+          </div>
+          <h3>Sentinel Ops</h3>
+          <p class="case-summary">One contract-driven platform for access events, device health, video metadata, and operational KPIs—replacing disconnected security scaffolds with a coherent operator workflow.</p>
+          <div class="story-grid">
+            <div><h4>Problem</h4><p>Physical-security data lived across separate PACS, VMS, and KPI concepts with no shared contracts or deployment path.</p></div>
+            <div><h4>Approach</h4><p>Created an npm workspace spanning shared Zod contracts, a React interface, Lambda services, and one AWS CDK stack.</p></div>
+            <div><h4>Evidence</h4><p>Implements idempotent event ingest, device heartbeats, searchable video metadata, Cognito auth, and persisted seven-day KPI summaries.</p></div>
+          </div>
+          <ul class="metric-list" aria-label="Sentinel Ops implementation details">
+            <li><strong>6</strong><span>Lambda functions</span></li>
+            <li><strong>3</strong><span>DynamoDB tables</span></li>
+            <li><strong>4</strong><span>Operational domains</span></li>
+          </ul>
+          <div class="tag-list" aria-label="Technology stack">
+            <span>React 19</span><span>TypeScript</span><span>AWS CDK</span><span>Cognito</span><span>DynamoDB</span><span>Vitest</span>
+          </div>
+          <div class="case-links">
+            <a class="text-link" href="https://github.com/wats3082/System-pacs-security" target="_blank" rel="noreferrer">Review source <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a>
+            <span class="honesty-note">No live deployment is claimed until repository smoke tests pass.</span>
+          </div>
+        </div>
+      </article>
 
-  <script src="./assets/js/script.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <article class="case-study">
+        <div class="case-number" aria-hidden="true">02</div>
+        <div class="case-content">
+          <div class="case-topline">
+            <span class="project-type">Serverless decision support</span>
+            <span class="project-state project-state-live">Live frontend</span>
+          </div>
+          <h3>Weather API v2</h3>
+          <p class="case-summary">A React and AWS application that turns Open-Meteo forecasts into city, route, and demonstration turbulence-risk views with explicit boundaries around the model.</p>
+          <div class="story-grid">
+            <div><h4>Problem</h4><p>Weather lookup and route context require several data and caching decisions before they become useful in one workflow.</p></div>
+            <div><h4>Approach</h4><p>Combined a Vite frontend with TypeScript Lambda handlers, API Gateway, CDK, Cognito-protected saved locations, and DynamoDB TTL caching.</p></div>
+            <div><h4>Evidence</h4><p>Supports current conditions, five-day forecasts, route search, input validation, unit-tested cache behavior, and a five-factor heuristic.</p></div>
+          </div>
+          <div class="tag-list" aria-label="Technology stack">
+            <span>React 18</span><span>TypeScript</span><span>Open-Meteo</span><span>Lambda</span><span>API Gateway</span><span>Jest</span>
+          </div>
+          <div class="case-links">
+            <a class="button button-small button-primary" href="https://wats3082.github.io/weather-api-v2/" target="_blank" rel="noreferrer">Open live frontend <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="https://github.com/wats3082/weather-api-v2" target="_blank" rel="noreferrer">Review source <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="honesty-note">The turbulence score is a demonstration heuristic based on available surface weather—not an aviation safety product.</p>
+        </div>
+      </article>
+
+      <div class="supporting-work">
+        <div class="supporting-heading">
+          <p class="eyebrow">Supporting builds</p>
+          <h3>Range, without inflated claims.</h3>
+        </div>
+        <article class="compact-card">
+          <span class="compact-index">A</span>
+          <div><h4>Web Scraper Automation</h4><p>React 19 and Vite interface with simulated scrape-job data and a documented AWS ingestion, worker, and storage direction.</p><span class="card-status">Frontend prototype</span></div>
+          <a href="https://github.com/wats3082/Project-Web-Scraper" target="_blank" rel="noreferrer" aria-label="View Web Scraper Automation source">↗</a>
+        </article>
+        <article class="compact-card">
+          <span class="compact-index">B</span>
+          <div><h4>Abyss Diver</h4><p>A browser-first JavaScript survival game with scene and entity modules, keyboard and pointer controls, and a six-cache objective.</p><span class="card-status">Playable demo</span></div>
+          <a href="https://wats3082.github.io/Game-AbyssDiver/" target="_blank" rel="noreferrer" aria-label="Play Abyss Diver">↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section capabilities-section" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Capabilities</p>
+          <h2 id="capabilities-title">Useful across the whole delivery path.</h2>
+        </div>
+        <p>Technical execution grounded in operational constraints, clear failure states, and honest product boundaries.</p>
+      </div>
+      <div class="capability-grid">
+        <article><span>01</span><h3>Security product thinking</h3><p>Translate access, device, audit, identity, and operator workflows into explicit contracts and defensible system boundaries.</p><strong>Security operations · Cognito · Validation</strong></article>
+        <article><span>02</span><h3>Full-stack delivery</h3><p>Connect accessible React experiences to typed services, API behavior, authentication, and data persistence.</p><strong>React · TypeScript · Zod · REST</strong></article>
+        <article><span>03</span><h3>Cloud architecture</h3><p>Model serverless systems as code with deployment paths, least-privilege service roles, caching, and observable errors.</p><strong>AWS CDK · Lambda · DynamoDB</strong></article>
+        <article><span>04</span><h3>Quality and automation</h3><p>Build test, type-check, synthesis, and deployment checks into the repository instead of treating validation as a handoff.</p><strong>Vitest · Jest · GitHub Actions · CI/CD</strong></article>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div>
+        <p class="eyebrow">About</p>
+        <h2 id="about-title">Operator context is a software advantage.</h2>
+      </div>
+      <div class="about-copy">
+        <p class="about-lede">My background spans asset protection, field systems, security operations, and program delivery. That experience shapes how I build: start with the real decision, make states and ownership clear, and design for failure before polish.</p>
+        <p>The portfolio work shows a practical transition into modern engineering—combining domain depth with React, TypeScript, JavaScript, AWS, infrastructure as code, and automation. I am most useful where product, security, and delivery concerns have to meet.</p>
+        <div class="interview-topics">
+          <p>Good interview threads</p>
+          <ul>
+            <li>Why Sentinel Ops uses one shared contract package</li>
+            <li>How idempotency protects security-event ingestion</li>
+            <li>Where the weather heuristic is useful—and where it is not</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Start a conversation</p>
+      <h2 id="contact-title">Need someone who can connect field reality to software delivery?</h2>
+      <p>I’m open to security-focused software, cloud, automation, and technical program conversations.</p>
+      <div class="contact-actions">
+        <a class="button button-light" href="mailto:russellalanwatson@gmail.com?subject=Portfolio%20conversation">Email Russell <span aria-hidden="true">↗</span></a>
+        <a class="button button-outline-light" href="https://www.linkedin.com/in/r-wats3082" target="_blank" rel="noreferrer">LinkedIn <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a>
+        <a class="button button-outline-light" href="https://github.com/wats3082" target="_blank" rel="noreferrer">GitHub <span class="sr-only">(opens in a new tab)</span><span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Russell Watson <span aria-hidden="true">·</span> Security-minded software engineer</p>
+    <p>Built with semantic HTML, CSS, and JavaScript <span aria-hidden="true">·</span> <span id="year">2026</span></p>
+  </footer>
+
+  <script src="./assets/js/script.js" defer></script>
 </body>
-
 </html>

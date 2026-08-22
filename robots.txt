@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://wats3082.github.io/Portfolio-2025-RW/sitemap.xml
