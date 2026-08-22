@@ -5,9 +5,16 @@
 // element toggle function
 const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
 
-// theme toggle variables
-const themeToggle = document.getElementById("theme-toggle");
-const bodyElement = document.body;
+
+
+// sidebar variables
+const sidebar = document.querySelector("[data-sidebar]");
+const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+
+// sidebar toggle functionality for mobile
+sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+
+
 
 // testimonials variables
 const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
@@ -22,38 +29,29 @@ const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
 const testimonialsModalFunc = function () {
-  if (modalContainer) modalContainer.classList.toggle("active");
-  if (overlay) overlay.classList.toggle("active");
+  modalContainer.classList.toggle("active");
+  overlay.classList.toggle("active");
 }
 
 // add click event to all modal items
-if (testimonialsItem.length && modalImg && modalTitle && modalText) {
-  for (let i = 0; i < testimonialsItem.length; i++) {
+for (let i = 0; i < testimonialsItem.length; i++) {
 
-    testimonialsItem[i].addEventListener("click", function () {
-      const avatar = this.querySelector("[data-testimonials-avatar]");
-      const title = this.querySelector("[data-testimonials-title]");
-      const text = this.querySelector("[data-testimonials-text]");
+  testimonialsItem[i].addEventListener("click", function () {
 
-      if (!avatar || !title || !text) return;
+    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
+    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
+    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
 
-      modalImg.src = avatar.src;
-      modalImg.alt = avatar.alt;
-      modalTitle.innerHTML = title.innerHTML;
-      modalText.innerHTML = text.innerHTML;
+    testimonialsModalFunc();
 
-      testimonialsModalFunc();
+  });
 
-    });
-
-  }
 }
 
 // add click event to modal close button
-if (modalCloseBtn && overlay) {
-  modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-  overlay.addEventListener("click", testimonialsModalFunc);
-}
+modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+overlay.addEventListener("click", testimonialsModalFunc);
 
 
 
@@ -122,21 +120,6 @@ const form = document.querySelector("[data-form]");
 const formInputs = document.querySelectorAll("[data-form-input]");
 const formBtn = document.querySelector("[data-form-btn]");
 
-// theme toggle behavior
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
-    const currentTheme = bodyElement.getAttribute("data-theme");
-    const nextTheme = currentTheme === "dark" ? "light" : "dark";
-    bodyElement.setAttribute("data-theme", nextTheme);
-
-    if (nextTheme === "light") {
-      themeToggle.innerHTML = '<ion-icon name="sunny-outline"></ion-icon><span>Dark Mode</span>';
-    } else {
-      themeToggle.innerHTML = '<ion-icon name="moon-outline"></ion-icon><span>Light Mode</span>';
-    }
-  });
-}
-
 // add event to all form input field
 for (let i = 0; i < formInputs.length; i++) {
   formInputs[i].addEventListener("input", function () {
@@ -155,22 +138,22 @@ for (let i = 0; i < formInputs.length; i++) {
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll(".section[data-page]");
+const pages = document.querySelectorAll("[data-page]");
 
-// navigation function
-function navigateTo(targetPage) {
-  pages.forEach(page => {
-    page.classList.toggle("active", page.dataset.page === targetPage);
+// add event to all nav link
+for (let i = 0; i < navigationLinks.length; i++) {
+  navigationLinks[i].addEventListener("click", function () {
+
+    for (let i = 0; i < pages.length; i++) {
+      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
+        pages[i].classList.add("active");
+        navigationLinks[i].classList.add("active");
+        window.scrollTo(0, 0);
+      } else {
+        pages[i].classList.remove("active");
+        navigationLinks[i].classList.remove("active");
+      }
+    }
+
   });
-  navigationLinks.forEach(link => {
-    link.classList.toggle("active", link.dataset.page === targetPage);
-  });
-  window.scrollTo(0, 0);
 }
-
-// add event to all nav links
-navigationLinks.forEach(link => {
-  link.addEventListener("click", function () {
-    navigateTo(this.dataset.page);
-  });
-});

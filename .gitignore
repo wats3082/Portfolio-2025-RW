@@ -1,8 +1,0 @@
-# Static portfolio site
-.DS_Store
-*.log
-node_modules/
-dist/
-.env
-.env.local
-.vscode/
