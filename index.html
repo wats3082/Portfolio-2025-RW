@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-7">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Russell Watson - Portfolio</title>
@@ -69,7 +69,7 @@
           <p class="title">Dad. Musician. Computer enthusiast </p>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
+        <button class="info_more-btn" type="button" aria-expanded="false" aria-controls="sidebar-details" data-sidebar-btn>
           <span>Show Contacts</span>
 
           <ion-icon name="chevron-down"></ion-icon>
@@ -77,7 +77,7 @@
 
       </div>
 
-      <div class="sidebar-info_more">
+      <div class="sidebar-info_more" id="sidebar-details">
 
         <div class="separator"></div>
 
@@ -155,24 +155,24 @@
     -->
 
             <li class="social-item">
-            <a href="https://discord.com/channels/1403572693894299678/1403572693894299681" class="social-link">
+            <a href="https://discord.com/channels/1403572693894299678/1403572693894299681" class="social-link" aria-label="Discord">
               <ion-icon name="logo-discord"></ion-icon>
             </a>
           </li>
        
           <li class="social-item">
-            <a href="https://www.facebook.com/russell.watson.92" class="social-link">
+            <a href="https://www.facebook.com/russell.watson.92" class="social-link" aria-label="Facebook">
               <ion-icon name="logo-facebook"></ion-icon>
             </a>
           </li>
           
             <li class="social-item">
-            <a href="https://www.linkedin.com/in/r-wats3082" class="social-link">
+            <a href="https://www.linkedin.com/in/r-wats3082" class="social-link" aria-label="LinkedIn">
               <ion-icon name="logo-linkedin"></ion-icon>
             </a>
           </li>
            <li class="social-item">
-            <a href="https://github.com/wats3082?tab=repositories" class="social-link">
+            <a href="https://github.com/wats3082?tab=repositories" class="social-link" aria-label="GitHub">
               <ion-icon name="logo-github"></ion-icon>
             </a>
           </li>
@@ -289,8 +289,7 @@ responding to security threats.
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
+                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
               </div>
 
               <div class="service-content-box">
@@ -379,7 +378,7 @@ responding to security threats.
           <ul class="testimonials-list has-scrollbar">
 
             <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+              <div class="content-card" role="button" tabindex="0" aria-haspopup="dialog" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
                   <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
@@ -400,7 +399,7 @@ responding to security threats.
             </li>
 
             <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
+              <div class="content-card" role="button" tabindex="0" aria-haspopup="dialog" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
                   <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
@@ -443,13 +442,14 @@ responding to security threats.
           - testimonials modal
         -->
 
-        <div class="modal-container" data-modal-container>
+        <div class="modal-container" role="dialog" aria-modal="true" aria-hidden="true"
+          aria-labelledby="referral-modal-title" data-modal-container>
 
           <div class="overlay" data-overlay></div>
 
           <section class="testimonials-modal">
 
-            <button class="modal-close-btn" data-modal-close-btn>
+            <button class="modal-close-btn" type="button" aria-label="Close referral" data-modal-close-btn>
               <ion-icon name="close-outline"></ion-icon>
             </button>
 
@@ -463,7 +463,7 @@ responding to security threats.
 
             <div class="modal-content">
 
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+              <h4 class="h3 modal-title" id="referral-modal-title" data-modal-title>Daniel lewis</h4>
 
               <time datetime="2021-06-14">14 June, 2021</time>
 
@@ -790,7 +790,7 @@ work environment, and driving project success through effective communication an
           <ul class="filter-list">
 
             <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
+              <button class="active" type="button" data-filter-btn>All</button>
             </li>
 
 
@@ -813,7 +813,7 @@ work environment, and driving project success through effective communication an
 
           <div class="filter-select-box">
 
-            <button class="filter-select" data-select>
+            <button class="filter-select" type="button" aria-expanded="false" data-select>
 
               <div class="select-value" data-selecct-value>Select category</div>
 
@@ -826,19 +826,19 @@ work environment, and driving project success through effective communication an
             <ul class="select-list">
 
               <li class="select-item">
-                <button data-select-item>All</button>
+                <button type="button" data-select-item>All</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>1. Web design</button>
+                <button type="button" data-select-item>1. Web design</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>2. Applications</button>
+                <button type="button" data-select-item>2. Applications</button>
               </li>
 
               <li class="select-item">
-                <button data-select-item>3. Web development</button>
+                <button type="button" data-select-item>3. Web development</button>
               </li>
 
             </ul>
@@ -861,9 +861,8 @@ work environment, and driving project success through effective communication an
                 <h3 class="project-title">1) Open Weather App</h3>
 
                 <p class="project-category">Using Open Weather API project. Flask and Python</p>
-                <a href="ProjectOne.html" target="_blank">Beta : Project One Wiki</a>
-
               </a>
+              <a href="ProjectOne.html" target="_blank" rel="noopener noreferrer">Beta : Project One Wiki</a>
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web development">
@@ -886,7 +885,7 @@ work environment, and driving project success through effective communication an
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="https://github.com/wats3082/Game-ReactQuiz">
+              <a href="https://github.com/wats3082/Project-Cybersecurity-Quiz">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -904,7 +903,7 @@ work environment, and driving project success through effective communication an
             </li>
 
             <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="https://github.com/wats3082/API-English_French-Translator">
+              <div class="project-link">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -918,7 +917,7 @@ work environment, and driving project success through effective communication an
 
                 <p class="project-category">Translation in real time using IBMWatson API</p>
 
-              </a>
+              </div>
             </li>
 
 
@@ -928,7 +927,7 @@ work environment, and driving project success through effective communication an
 
             
             <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="https://github.com/wats3082/Project-Movie-Reviews-Database">
+              <div class="project-link">
 
                 <figure class="project-img">
                   <div class="project-item-icon-box">
@@ -942,7 +941,7 @@ work environment, and driving project success through effective communication an
 
                 <p class="project-category">User created and searchable movie (or any subject) database using MongoDB</p>
 
-              </a>
+              </div>
             </li>
 
             <li class="project-item  active" data-filter-item data-category="web design">
@@ -1292,7 +1291,7 @@ work environment, and driving project success through effective communication an
           <figure>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
+              title="Map of Sacramento, California" width="400" height="300" loading="lazy"></iframe>
           </figure>
         </section>
 
@@ -1300,15 +1299,18 @@ work environment, and driving project success through effective communication an
 
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="#" class="form" data-form>
+          <form action="mailto:russellalanwatson@gmail.com" method="post" enctype="text/plain" class="form" data-form>
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="text" name="fullname" class="form-input" placeholder="Full name"
+                aria-label="Full name" required data-form-input>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address"
+                aria-label="Email address" required data-form-input>
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <textarea name="message" class="form-input" placeholder="Your Message"
+              aria-label="Your message" required data-form-input></textarea>
 
             <button class="form-btn" type="submit" disabled data-form-btn>
               <ion-icon name="paper-plane"></ion-icon>
