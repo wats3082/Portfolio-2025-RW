@@ -2,6 +2,8 @@ Using template to host current resume web design
 
 https://wats3082.github.io/Portfolio-2025-RW/
 
+See [ROADMAP.md](./ROADMAP.md) for the intentionally conservative maintenance plan and historical-design guardrails.
+
 # Portfolio forked from repo: vCard - Personal portfolio
 
 
@@ -14,5 +16,4 @@ vCard is a fully responsive personal portfolio website, responsive for all devic
 
 ![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
 ![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
-
 

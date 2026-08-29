@@ -175,7 +175,13 @@ for (let i = 0; i < navigationLinks.length; i++) {
     }
 
     for (let linkIndex = 0; linkIndex < navigationLinks.length; linkIndex++) {
-      navigationLinks[linkIndex].classList.toggle("active", this === navigationLinks[linkIndex]);
+      const isActive = this === navigationLinks[linkIndex];
+      navigationLinks[linkIndex].classList.toggle("active", isActive);
+      if (isActive) {
+        navigationLinks[linkIndex].setAttribute("aria-current", "page");
+      } else {
+        navigationLinks[linkIndex].removeAttribute("aria-current");
+      }
     }
 
     window.scrollTo(0, 0);
